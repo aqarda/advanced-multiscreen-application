@@ -6,7 +6,7 @@ export default function AppDetailScreen() {
 
     return (
         <View style={styles.container}>
-            <Stack.Screen options={{ title: 'App ${id}'}} />
+            <Stack.Screen options={{ title: `App ${id}`}} />
             <Text style={styles.heading}>App detail</Text>
             <Text style={styles.body}>Route parameter id = {id}</Text>
         </View>
