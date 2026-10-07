@@ -6,6 +6,8 @@ import type {
   TodayStory,
 } from "@/types/models";
 
+const closeFriendsImage = require("../../assets/images/today-1.jpeg");
+
 export const APPS: StoreApp[] = [
   {
     id: "photoshare",
@@ -181,52 +183,28 @@ export const CATEGORIES: Category[] = [
   { id: "productivity", name: "Productivity", iconName: "paper-plane", iconColor: "#5856D6" },
 ];
 
-export const FEATURED_STORIES: FeaturedStory[] = [
+export const FEATURED_STORY: FeaturedStory = {
+  eyebrow: "GET ORGANIZED",
+  title: "Automate Your Admin",
+  subtitle: "Apps to streamline tasks",
+  image: require("../../assets/images/apps-banner.jpeg"),
+  aspectRatio: 1042 / 626,
+};
+
+export const TODAY_STORIES: TodayStory[] = [
+  { id: "close-friends", image: closeFriendsImage, aspectRatio: 1066 / 1314 },
   {
-    id: "automate",
-    eyebrow: "GET ORGANIZED",
-    title: "Automate Your Admin",
-    subtitle: "Apps to streamline tasks",
-    color: "#F07F2A",
-    iconName: "folder-open",
-  },
-  {
-    id: "focus",
-    eyebrow: "HAPPENING NOW",
-    title: "Train Your Focus",
-    subtitle: "Apps to help you concentrate",
-    color: "#7B68C8",
-    iconName: "timer",
+    id: "muse-spotlight",
+    image: require("../../assets/images/today-2.jpeg"),
+    aspectRatio: 1066 / 476,
   },
 ];
 
-export const TODAY_STORIES: TodayStory[] = [
-  {
-    id: "castle-season",
-    kind: "feature",
-    label: "NOW AVAILABLE",
-    eyebrow: "NEW SEASON",
-    title: "Castle Clash's Cosmic Curse Returns",
-    description: "Get spooky new skins this season.",
-    color: "#7E2620",
-    appId: "castleclash",
-  },
-  {
-    id: "musebot-spotlight",
-    kind: "spotlight",
-    color: "#8E9AB5",
-    appId: "musebot",
-  },
-  {
-    id: "playing-now",
-    kind: "feature",
-    eyebrow: "TRY NOW",
-    title: "What We're Playing Now",
-    description: "Fresh picks from our editors.",
-    color: "#3A6EA5",
-    appId: "dicego",
-  },
-];
+export const APP_EVENT = {
+  label: "NOW AVAILABLE",
+  image: closeFriendsImage,
+  aspectRatio: 1068 / 624,
+};
 
 export const BROWSE_CATEGORIES: BrowseCategory[] = [
   { id: "top-apps", title: "Top Downloaded Apps", color: "#7FA4E3", iconName: "trophy" },

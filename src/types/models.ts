@@ -1,5 +1,6 @@
 import type { Ionicons } from "@expo/vector-icons";
 import type { ComponentProps } from "react";
+import type { ImageSourcePropType } from "react-native";
 
 export type IoniconName = ComponentProps<typeof Ionicons>["name"];
 
@@ -29,23 +30,17 @@ export type Category = {
 };
 
 export type FeaturedStory = {
-  id: string;
   eyebrow: string;
   title: string;
   subtitle: string;
-  color: string;
-  iconName: IoniconName;
+  image: ImageSourcePropType;
+  aspectRatio: number;
 };
 
 export type TodayStory = {
   id: string;
-  kind: "feature" | "spotlight";
-  label?: string;
-  eyebrow?: string;
-  title?: string;
-  description?: string;
-  color: string;
-  appId: string;
+  image: ImageSourcePropType;
+  aspectRatio: number;
 };
 
 export type BrowseCategory = {
