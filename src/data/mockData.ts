@@ -1,10 +1,4 @@
-import type {
-  BrowseCategory,
-  Category,
-  FeaturedStory,
-  StoreApp,
-  TodayStory,
-} from "@/types/models";
+import type { BrowseCategory, Category, FeaturedStory, StoreApp, TodayStory } from "@/types/models";
 
 const closeFriendsImage = require("../../assets/images/today-1.jpeg");
 
